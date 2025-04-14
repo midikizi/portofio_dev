@@ -1,0 +1,105 @@
+---
+---
+
+<section id="experience" class="py-20 bg-gray-900/95 backdrop-blur-sm">
+  <div class="container mx-auto px-6 max-w-4xl">
+    <h2 class="text-3xl font-bold text-purple-400 mb-8 text-center animate-fade-in">Expérience Professionnelle</h2>
+    <div class="bg-gradient-to-br from-gray-800/50 to-purple-900/30 p-8 rounded-lg shadow-lg border border-purple-500/10 hover:border-purple-500/30 transition-all duration-300 transform hover:scale-[1.02]">
+      <div class="mb-8">
+        <div class="flex items-center gap-4 mb-6">
+          <div class="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-purple-300">Développeur d'Applications</h3>
+            <p class="text-gray-300">Direction Générale de la Société des Postes du Togo</p>
+          </div>
+        </div>
+        <div class="prose text-gray-300">
+          <p class="text-lg mb-4">En tant que développeur d'applications, j'ai :</p>
+          <ul class="list-none space-y-3">
+            {[
+              "Participé au développement et à la maintenance d'applications critiques",
+              "Optimisé les performances des bases de données",
+              "Collaboré avec les équipes techniques pour la résolution de problèmes complexes",
+              "Appliqué les meilleures pratiques de développement et de sécurité",
+              "Contribué à l'amélioration continue des processus de développement"
+            ].map((item, index) => (
+              <li class="flex items-center gap-3 group">
+                <span class="w-1.5 h-1.5 bg-purple-400 rounded-full group-hover:bg-purple-300 transition-colors"></span>
+                <span class="group-hover:text-purple-200 transition-colors">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+      
+      <div class="mt-12 pt-8 border-t border-purple-500/10">
+        <h3 class="text-xl font-semibold text-purple-300 mb-6">Compétences Développées</h3>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-gray-800/30 p-6 rounded-lg hover:bg-gray-800/40 transition-colors">
+            <h4 class="font-medium text-purple-300 mb-4 flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              Techniques
+            </h4>
+            <ul class="space-y-3">
+              {[
+                "Développement d'applications robustes et scalables",
+                "Optimisation des performances",
+                "Intégration de systèmes complexes",
+                "Sécurité des applications"
+              ].map((item, index) => (
+                <li class="flex items-center gap-2 text-gray-300 hover:text-purple-200 transition-colors">
+                  <span class="w-1.5 h-1.5 bg-purple-400 rounded-full"></span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div class="bg-gray-800/30 p-6 rounded-lg hover:bg-gray-800/40 transition-colors">
+            <h4 class="font-medium text-purple-300 mb-4 flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+              Soft Skills
+            </h4>
+            <ul class="space-y-3">
+              {[
+                "Travail en équipe",
+                "Communication technique",
+                "Gestion de projet",
+                "Résolution de problèmes"
+              ].map((item, index) => (
+                <li class="flex items-center gap-2 text-gray-300 hover:text-purple-200 transition-colors">
+                  <span class="w-1.5 h-1.5 bg-purple-400 rounded-full"></span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>

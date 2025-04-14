@@ -1,0 +1,104 @@
+---
+
+const projects = [
+  {
+    title: "Plateforme de Création des Actes de Naissance",
+    description: "Projet de soutenance de licence professionnelle. Développement d'une plateforme complète pour la création et la gestion des actes de naissance, utilisant une architecture à trois niveaux et une méthodologie Agile.",
+    tech: ["Spring Boot", "Angular", "Jasper Report", "Github","Jira"],
+    methodology: "Agile avec des sprints de 1-4 semaines",
+    architecture: "Architecture à trois niveaux (Backend, Frontend, Base de données)",
+    images: [
+      { url: "/images/interface principale.jpg", alt: "Interface principale" },
+      { url: "/images/actes-2.jpg", alt: "Génération d'acte" }
+    ]
+  },
+  {
+    title: "Application de Gestion pour une Microfinance (JPOPE)",
+    description: "Application complète pour gérer les activités d'une microfinance, incluant la gestion des clients, des prêts et des transactions. Présentée lors des Journées Portes Ouvertes Projet Étudiant (JPOPE) d'IPNET.",
+    tech: ["PHP", "MySQL", "Symfony","Github","Trello"],
+    images: [
+      { url: "/images/E1.jpg", alt: "Dashboard" },
+      { url: "/images/Screenshot 2023-08-17 102041.png", alt: "Gestion des prêts" }
+    ]
+  },
+  {
+    title: "Application Web de Gestion de Cinéma (JPOPE)",
+    description: "Système de gestion pour cinéma permettant la gestion des projections, horaires, réservations en ligne et promotions. Présentée lors des JPOPE d'IPNET.",
+    tech: ["Python", "Django REST", "Angular","Github","Jira"],
+    images: [
+      { url: "/images/accCinetrek.png", alt: "Accueil" },
+      { url: "/images/image.png", alt: "Dashboard Admin" }
+    ]
+  }
+];
+---
+
+<section id="projects" class="py-20 bg-gray-900/95 backdrop-blur-sm">
+  <div class="container mx-auto px-4 lg:px-8 max-w-[1400px]">
+    <h2 class="text-3xl font-bold text-purple-400 mb-12 text-center animate-fade-in">Projets</h2>
+    <div class="grid gap-16">
+      {projects.map(project => (
+        <div class="bg-gradient-to-br from-gray-800/50 to-purple-900/30 rounded-2xl shadow-lg border border-purple-500/10 hover:border-purple-500/30 transition-all duration-300 transform hover:scale-[1.01] overflow-hidden">
+          <div class="p-8 lg:p-10">
+            <h3 class="text-2xl lg:text-3xl font-semibold text-purple-300 mb-4">{project.title}</h3>
+            <p class="text-gray-300 mb-8 text-lg">{project.description}</p>
+            
+            {project.methodology && (
+              <div class="mb-6">
+                <h4 class="font-medium text-purple-300 mb-2 text-lg">Méthodologie</h4>
+                <p class="text-gray-300">{project.methodology}</p>
+              </div>
+            )}
+            
+            {project.architecture && (
+              <div class="mb-6">
+                <h4 class="font-medium text-purple-300 mb-2 text-lg">Architecture</h4>
+                <p class="text-gray-300">{project.architecture}</p>
+              </div>
+            )}
+
+            <div class="mb-8">
+              <h4 class="font-medium text-purple-300 mb-3 text-lg">Technologies</h4>
+              <div class="flex flex-wrap gap-3">
+                {project.tech.map(tech => (
+                  <span class="bg-purple-900/50 text-purple-300 px-4 py-2 rounded-full text-sm border border-purple-500/20 hover:border-purple-500/40 transition-colors">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+              {project.images?.map(image => (
+                <div class="bg-gray-800/30 rounded-xl shadow-lg border border-purple-500/10 group overflow-hidden">
+                  <img 
+                    src={image.url} 
+                    alt={image.alt}
+                    class="w-full h-[300px] object-cover transition-all duration-500 group-hover:scale-105"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>

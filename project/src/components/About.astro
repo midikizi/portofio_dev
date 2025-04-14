@@ -1,0 +1,91 @@
+---
+const details = [
+  { label: "Localisation", value: "Lomé, Togo" },
+  { label: "Email", value: "emidikizi@gmail.com" },
+  { label: "Téléphone", value: "+228 91934408" },
+];
+
+const education = [
+  {
+    title: "Licence Professionnelle en Génie Logiciel",
+    school: "IPNET Institute of Technology",
+    period: "Octobre 2021 - Décembre 2024",
+    achievements: [
+      "Spécialisation en développement d'applications",
+      "Projets pratiques en méthodologie Agile",
+      "Formation en architecture logicielle"
+    ]
+  }
+];
+---
+
+<section id="about" class="py-20 bg-gray-900/95 backdrop-blur-sm">
+  <div class="container mx-auto px-4 lg:px-8 max-w-[1400px]">
+    <h2 class="text-3xl font-bold text-purple-400 mb-12 text-center">À propos</h2>
+    <div class="grid md:grid-cols-2 gap-12">
+      <div class="space-y-8">
+        <div class="bg-gradient-to-br from-gray-800/50 to-purple-900/30 p-8 rounded-xl shadow-lg border border-purple-500/10">
+          <p class="text-gray-300 text-lg leading-relaxed">
+            Développeur d'applications passionné, actuellement en stage à la Direction Générale de la Société des Postes du Togo. 
+            Spécialisé dans le développement d'applications web et de gestion, avec une solide expérience dans la conception et 
+            l'implémentation de solutions logicielles innovantes. Mon approche combine créativité technique et méthodologies agiles 
+            pour livrer des solutions performantes et évolutives.
+          </p>
+        </div>
+
+        <div class="bg-gradient-to-br from-gray-800/50 to-purple-900/30 p-8 rounded-xl shadow-lg border border-purple-500/10">
+          <h3 class="text-xl font-semibold text-purple-300 mb-6">Informations personnelles</h3>
+          <div class="grid grid-cols-2 gap-6">
+            {details.map(detail => (
+              <div>
+                <h4 class="font-medium text-purple-300 mb-2">{detail.label}</h4>
+                <p class="text-gray-300">{detail.value}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div class="space-y-8">
+        <div class="bg-gradient-to-br from-gray-800/50 to-purple-900/30 p-8 rounded-xl shadow-lg border border-purple-500/10">
+          <h3 class="text-xl font-semibold text-purple-300 mb-6">Formation</h3>
+          {education.map(edu => (
+            <div class="space-y-4">
+              <div>
+                <h4 class="text-lg font-medium text-purple-300">{edu.title}</h4>
+                <p class="text-gray-300">{edu.school}</p>
+                <p class="text-gray-400 text-sm">{edu.period}</p>
+              </div>
+              <ul class="space-y-2">
+                {edu.achievements.map(achievement => (
+                  <li class="flex items-center gap-2 text-gray-300">
+                    <span class="w-1.5 h-1.5 bg-purple-400 rounded-full"></span>
+                    {achievement}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        <div class="bg-gradient-to-br from-gray-800/50 to-purple-900/30 p-8 rounded-xl shadow-lg border border-purple-500/10">
+          <h3 class="text-xl font-semibold text-purple-300 mb-6">Points forts</h3>
+          <ul class="space-y-3">
+            {[
+              "Maîtrise des méthodologies Agiles",
+              "Expertise en développement full-stack",
+              "Conception d'architectures évolutives",
+              "Gestion de projets techniques",
+              "Travail d'équipe et communication"
+            ].map(strength => (
+              <li class="flex items-center gap-2 text-gray-300">
+                <span class="w-1.5 h-1.5 bg-purple-400 rounded-full"></span>
+                {strength}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

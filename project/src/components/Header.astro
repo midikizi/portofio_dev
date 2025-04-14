@@ -1,0 +1,23 @@
+---
+const navItems = [
+  { href: "#about", text: "À propos" },
+  { href: "#skills", text: "Compétences" },
+  { href: "#projects", text: "Projets" },
+  { href: "#contact", text: "Contact" },
+];
+---
+
+<header class="fixed w-full bg-gray-900/95 backdrop-blur-sm shadow-lg z-50 border-b border-purple-500/20">
+  <nav class="container mx-auto px-6 py-4">
+    <div class="flex items-center justify-between">
+      <a href="/" class="text-xl font-bold text-purple-400 hover:text-purple-300 transition-colors">Essodéké Iréné MIDIKIZI</a>
+      <div class="hidden md:flex space-x-8">
+        {navItems.map(item => (
+          <a href={item.href} class="text-gray-300 hover:text-purple-400 transition-colors">
+            {item.text}
+          </a>
+        ))}
+      </div>
+    </div>
+  </nav>
+</header>
