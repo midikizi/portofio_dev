@@ -25,6 +25,22 @@ const certifications = [
     date: "29th April 2025",
     duration: "33h 17m",
     image: "/images/Alison_Advanced_Certificate-4751-43889612_page-0001.jpg"
+  },
+
+    // Add more certifications as needed
+  {
+    title: "Understanding Cloud Computing",
+    platform: "DataCamp",
+    date: "02 April 2025",
+    duration: "2h",
+    image: "/images/Understanding Cloud Computing_page-0001.jpg"
+  },
+  {
+    title: "Intermediate Python for Developers",
+    platform: "DataCamp",
+    date: "26 March 2025",
+    duration: "2h",
+    image: "/images/Intermediate Python for Developers_page-0001.jpg"
   }
 ];
 
@@ -109,6 +125,11 @@ const certifications = [
                   <p class="text-gray-400">{cert.platform}</p>
                   <p class="text-gray-400 text-sm">{cert.date}</p>
                   <p class="text-gray-400 text-sm">{cert.duration}</p>
+                  <img
+                      src={cert.image}
+                      alt={`Certification: ${cert.title}`}
+                      class="w-full h-auto rounded-lg shadow-md mt-4"
+                  />
                 </div>
               </div>
             </div>
@@ -116,6 +137,8 @@ const certifications = [
         ))}
       </div>
     </div>
+
+
   </div>
 </section>
 
